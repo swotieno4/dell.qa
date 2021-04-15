@@ -24,7 +24,7 @@ public class TestBase {
 		 prop = new Properties();
 		 
 		try {
-			FileInputStream fle= new FileInputStream("C:\\eclipse\\dell.qa\\src\\main\\java\\com\\Config\\Config.properties");
+			FileInputStream fle= new FileInputStream("C:\\eclipse\\simon.qa\\src\\main\\java\\com\\Config\\Config.properties");
 			prop.load(fle);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -40,12 +40,12 @@ public class TestBase {
 		String browser = prop.getProperty("browser");
 		if (browser.equalsIgnoreCase("Chrome")) {
 			
-			System.setProperty("webdriver.chrome.driver", "C:\\eclipse\\dell.qa\\drivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\eclipse\\simon.qa\\drivers\\chromedriver.exe");
 			 driver = new ChromeDriver();
 		}
 		else if(browser.equalsIgnoreCase("Firefox")) {	
 			
-			System.setProperty("webdriver.gecko.driver", "C:\\eclipse\\dell.qa\\drivers\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", "C:\\eclipse\\simon.qa\\drivers\\geckodriver.exe");
 			driver = new FirefoxDriver();
 	}
 		driver.manage().window().maximize();

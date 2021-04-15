@@ -3,61 +3,58 @@ package com.TestPages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.TestBase.TestBase;
 
 public class LoginPage extends TestBase {
 	
 	//Page Factory or container will keep all locators & methods in this class
+	@FindBy(xpath="//input[@name='categorydata']")
+	WebElement UserInformation;
+	@FindBy(xpath="//input[@value='Add category']")
+	WebElement Add_Category;
 	
-		@FindBy(xpath="//input[@id=\"username\"]")
-		WebElement Username;
-		@FindBy(xpath="//input[@id=\"password\"]")
-		WebElement Password;
-		@FindBy(xpath="//button[@name=\"login\"]")
-		WebElement SignInButton;
-		
-		@FindBy(xpath="//img[@class=\"logo\"]")
-		WebElement Logo;
-		// i do not have the right expath
-		@FindBy(xpath="//div[@class=\"alert alert-danger fade in\"]")
-		WebElement ErrorMessage;
+	@FindBy(xpath="//button[@onclick='myFunctionSky()']")
+	WebElement SetSkyBlueButton;
+	
+	@FindBy(xpath="//body[@style='background-color: skyblue;']")
+	WebElement SkyBlue;
+	
+	@FindBy(xpath="//body[@style=\"background-color: white;\"]")
+	WebElement White;
+	
+	
+	@FindBy(xpath="//button[@onclick='myFunctionWhite()']")
+	WebElement SetWhiteBackground;
 		
 		
 		public LoginPage() {
 			PageFactory.initElements(driver, this);
-			
+			wait = new WebDriverWait(driver, 45);
+		}
+		public void verifyLogin() {
+			wait.until(ExpectedConditions.visibilityOf(UserInformation));
+			UserInformation.sendKeys("Trail and Error");
+			Add_Category.click();
+		}
+		public void setSkyBluebackground() {
+			wait.until(ExpectedConditions.visibilityOf(SetSkyBlueButton));
+			SetSkyBlueButton.click();
 		}
 		
-		//All Actions
-		public void verifyLogin(String Un, String pw) {
-			Username.sendKeys(Un);
-			
-			Password.sendKeys(pw);
-			
-			SignInButton.click();
-			
+		public boolean VerifySkyBluebackground() {
+			return SkyBlue.isDisplayed();
 		}
-		public String VerifyTitle() {
-		return	driver.getTitle();
-			
 		
-		}
-		public boolean verifyLogo() {
-			return Logo.isDisplayed();
+		public boolean setBackgroundToWhite() {
+			wait.until(ExpectedConditions.visibilityOf(SetWhiteBackground));
+			SetWhiteBackground.click();
+			return White.isDisplayed();
 			
 		}
+	}
 	
-		public void ErrorMessage(String Un, String pw) {
-			
-			Username.sendKeys(Un);
-			
-			Password.sendKeys(pw);
-			SignInButton.click();
-			
-		}
 		
-		public boolean VerifyError() {
-			return ErrorMessage.isDisplayed();
-		}
-}
+
