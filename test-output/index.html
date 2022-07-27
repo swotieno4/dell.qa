@@ -7,7 +7,7 @@
 
     <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
     <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Owner\AppData\Local\Temp\testng-eclipse--1381116336\testng-customsuite.xml</span>
+                    <span>C:\Users\Owner\AppData\Local\Temp\testng-eclipse--1473020714\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -105,21 +105,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="com.TestCases.LoginPageTest" class="method navigator-link" hash-for-method="VerifyLoginPage">VerifyLoginPage</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.TestCases.LoginPageTest" class="method navigator-link" hash-for-method="VerifyLogoofThePage">VerifyLogoofThePage</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.TestCases.LoginPageTest" class="method navigator-link" hash-for-method="VerifyTitleofThePage">VerifyTitleofThePage</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.TestCases.LoginPageTest" class="method navigator-link" hash-for-method="verifyErrorMessagewithinvaliduspw">verifyErrorMessagewithinvaliduspw</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -149,39 +134,12 @@
 (This will test login feature)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="VerifyLogoofThePage">
-                  </a> <!-- VerifyLogoofThePage -->
-                  <span class="method-name">VerifyLogoofThePage</span>
-                  <em>
-(THis will verify logo)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="VerifyTitleofThePage">
-                  </a> <!-- VerifyTitleofThePage -->
-                  <span class="method-name">VerifyTitleofThePage</span>
-                  <em>
-(this will verify title of login page)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyErrorMessagewithinvaliduspw">
-                  </a> <!-- verifyErrorMessagewithinvaliduspw -->
-                  <span class="method-name">verifyErrorMessagewithinvaliduspw</span>
-                  <em>
-(Verify login error message)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Owner\AppData\Local\Temp\testng-eclipse--1381116336\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\Owner\AppData\Local\Temp\testng-eclipse--1473020714\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -190,7 +148,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.TestCases.LoginPageTest&quot;/&gt;
+      &lt;class name=&quot;com.TestCases.LoginPageTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;VerifyLoginPage&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.TestCases.LoginPageTest --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -230,28 +192,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyErrorMessagewithinvaliduspw')
+data.setCell(0, 1, 'VerifyLoginPage')
 data.setCell(0, 2, 'com.TestCases.LoginPageTest')
-data.setCell(0, 3, 6689);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'VerifyLoginPage')
-data.setCell(1, 2, 'com.TestCases.LoginPageTest')
-data.setCell(1, 3, 3048);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'VerifyLogoofThePage')
-data.setCell(2, 2, 'com.TestCases.LoginPageTest')
-data.setCell(2, 3, 473);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'VerifyTitleofThePage')
-data.setCell(3, 2, 'com.TestCases.LoginPageTest')
-data.setCell(3, 3, 399);
+data.setCell(0, 3, 2084);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -266,9 +216,20 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.TestCases.LoginPageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">verifyErrorMessagewithinvaliduspw</span>
+                <br/>
+                <span class="ignored-method-name">VerifyTitleofThePage</span>
+                <br/>
+                <span class="ignored-method-name">VerifyLogoofThePage</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -284,47 +245,11 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyLoginPage</span>
-                <span class="method-start">7505 ms</span>
+                <span class="method-start">3405 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">Teardown</span>
-                <span class="method-start">10559 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">SetUp</span>
-                <span class="method-start">11378 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">VerifyLogoofThePage</span>
-                <span class="method-start">17979 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">Teardown</span>
-                <span class="method-start">18453 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">SetUp</span>
-                <span class="method-start">19156 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">VerifyTitleofThePage</span>
-                <span class="method-start">25652 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">Teardown</span>
-                <span class="method-start">26052 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">SetUp</span>
-                <span class="method-start">26748 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">verifyErrorMessagewithinvaliduspw</span>
-                <span class="method-start">33359 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">Teardown</span>
-                <span class="method-start">40049 ms</span>
+                <span class="method-start">5496 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

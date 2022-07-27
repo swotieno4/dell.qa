@@ -21,13 +21,16 @@ public class LoginPageTest extends TestBase {
 		@BeforeMethod
 		
 		public void SetUp() {
+				
 		initil();
+		
 		loginpage = new LoginPage();
-			
+		
 			
 		}
 		@Test(description="This will test login feature")
 		public void VerifyLoginPage() {
+			
 		loginpage.verifyLogin(prop.getProperty("UserName"),prop.getProperty("Password"));
 		
 		}

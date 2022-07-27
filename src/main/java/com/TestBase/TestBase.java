@@ -38,9 +38,9 @@ public class TestBase {
 		
 		
 		String browser = prop.getProperty("browser");
-		if (browser.equalsIgnoreCase("Chrome")) {
+		if (browser.equalsIgnoreCase("Chromedriver")) {
 			
-			System.setProperty("webdriver.chrome.driver", "C:\\eclipse\\dell.qa\\drivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "C:\\eclipse\\dell.qa\\drivers\\chromedriver103.exe");
 			 driver = new ChromeDriver();
 		}
 		else if(browser.equalsIgnoreCase("Firefox")) {	
